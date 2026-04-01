@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'Alice';
+    src: url('fonts/Alice-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('fonts/GlacialIndifference-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CanvaSans';
+    src: url('fonts/CanvaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: repeating-linear-gradient(
+  to bottom,
+  #AB52CE ,
+  #AB52CE 20px,
+  #D9C76D, 
+  #D9C76D ,
+  #AB52CE, 
+  #AB52CE,
+  #D9C76D
+);
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.menu {
+    font-size: 22px;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Alice', serif;
+    font-size: 200px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-family: 'GlacialIndifference', serif;
+    font-size: 75px;
+}
+
+.intro-box {
+    width: calc(100% - 80px);
+    height: 580px;
+    display: flex;
+    background: rgba(255,255,255,0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+    backdrop-filter: blur(3px);
+}
+
+.intro-box .main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-box .main-content h3,
+.intro-box .main-content p {
+    font-family: 'CanvaSans', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.reserve-link {
+    font-family: 'GlacialIndifference', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #666666;
+    text-align: center;
+    display: block;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    transition: 0.3s;
+}
+
+.reserve-link:hover {
+    color: #7b2d9f;
+    font-size: 46px;
+}
+
+.intro-box .main-image {
+    flex: 1;
+    height: 100%;
+}
+
+.intro-box .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h2 {
+    margin-bottom: 60px;
+    font-family: 'GlacialIndifference', serif;
+    font-size: 60px;
+    color: white;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card .overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'GlacialIndifference', serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    transition: opacity 0.3s ease;
+}
+
+.card img:hover + .overlay-title {
+    opacity: 1;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-family: 'GlacialIndifference', serif;
+    color: white;
+    text-align: center;
+}
+
+.card button {
+    margin-top: 8px;
+    font-family: 'GlacialIndifference', serif;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #7b2d9f;
+    color: white;
+}
+
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-section h2 {
+    font-family: 'GlacialIndifference', serif;
+    font-size: 55px;
+    color: white;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.form {
+    background: rgba(255,255,255,0.35);
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.row input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.form button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg,#7b2d9f,#fdd82e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: linear-gradient(90deg,#fdd82e,#7b2d9f);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+.about {
+    width: 80%;
+    margin: 60px auto 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'GlacialIndifference', serif;
+    font-size: 45px;
+    color: white;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.about-box {
+    display: flex;
+    background: rgba(255,255,255,0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    height: 600px;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+    font-family: 'CanvaSans', serif;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact {
+    width: 60%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'GlacialIndifference', serif;
+    font-size: 45px;
+    color: white;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .intro-box { flex-direction: column; height: auto; margin: 20px auto; }
+    .intro-box .main-image img { height: 250px; }
+    .hero-text h1 { font-size: 80px; line-height: 1.1; }
+    .hero-text p { font-size: 35px; }
+
+    .service-grid { flex-wrap: wrap; gap: 40px; justify-content: center; }
+    .card { width: 45%; }
+    .card img { height: 300px; }
+
+    .about-box { flex-direction: column; height: auto; }
+    .about-img img { width: 100%; height: 250px; object-fit: cover; }
+    .about { width: 90%; }
+    .about-title { font-size: 36px; }
+
+    .contact { width: 80%; }
+    .contact-title { font-size: 36px; }
+}
+
+@media (max-width: 768px) {
+    .card { width: 100%; }
+    .card img { height: 250px; }
+
+    .intro-box .main-content h3 { font-size: 18px; }
+    .intro-box .main-content p { font-size: 16px; }
+    .reserve-link { font-size: 22px; }
+
+    .form input, .form textarea { font-size: 16px; }
+    .about-title { font-size: 30px; }
+}
+
+@media (max-width: 600px) {
+    body { font-size: 16px; }
+    .hero-text h1 { font-size: 40px; }
+    .hero-text p { font-size: 18px; }
+    .intro-box .main-content h3 { font-size: 16px; }
+    .intro-box .main-content p { font-size: 14px; }
+    .reserve-link { font-size: 18px; }
+
+    .services h2, .form-section h2, .about-title, .contact-title { font-size: 26px; }
+    .card h3 { font-size: 16px; }
+    .about-img img { height: 220px; }
+    .about-content { font-size: 16px; padding: 15px; }
+    .contact-box { padding: 25px; }
+    .form button { font-size: 16px; padding: 10px 20px; }
+    footer { font-size: 14px; }
+}

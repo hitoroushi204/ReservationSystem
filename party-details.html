@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Details - ReservedU</title>
+  <link rel="stylesheet" href="party-style.css">
+  <script defer src="party-details.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">ReservedU</div>
+  <div class="menu">☰</div>
+</header>
+
+<div class="hero-text">
+  <h1>Parties</h1>
+  <p>Everything you need to know about our parties</p>
+</div>
+
+<div class="transparent-box">
+  <h2>Event Description</h2>
+  <p>This distinguished celebration is crafted to provide an elegant, memorable experience with entertainment, engaging activities, ceremonial cake-cutting, professional photography, and delightful dining.</p>
+  <p>Your presence will make this milestone truly unforgettable.</p><br><br>
+
+  <h3>Core / Guaranteed Benefits:</h3>
+  <ul>
+    <li>Guaranteed seating for you and your companions.</li>
+    <li>Full program access to all scheduled activities, entertainment, and ceremonies.</li>
+    <li>Dining & refreshments: multi-course meal or buffet, appetizers, desserts, and beverages.</li>
+    <li>Special dietary accommodations available.</li>
+    <li>Cake-cutting ceremony participation.</li>
+    <li>Official photo opportunities and group photographs.</li>
+    <li>Event program handout.</li>
+    <li>Party favors / souvenirs for all registered guests.</li>
+  </ul>
+
+  <h3>Designs / Styling Included:</h3>
+  <ul>
+    <li>Elegant table settings, centerpieces, and table décor.</li>
+    <li>Themed decoration throughout the venue according to chosen event theme.</li>
+    <li>Coordinated color schemes, linens, and floral arrangements.</li>
+    <li>Decorative lighting and backdrops for photo opportunities.</li>
+    <li>Special display areas for cake, gifts, or guestbook.</li>
+    <li>Optional custom décor or branding elements for VIP guests or reserved tables.</li>
+  </ul>
+
+  <h3>Optional / Premium Extras:</h3>
+  <ul>
+    <li>VIP / priority seating areas.</li>
+    <li>Special surprises, live performances, or interactive entertainment.</li>
+    <li>Customized guest recognition or acknowledgment during the program.</li>
+    <li>Reserved parking (if available).</li>
+    <li>Exclusive networking opportunities with special guests or hosts.</li>
+    <li>Refreshment / beverage stations for premium access.</li>
+    <li>Event photography prints or digital keepsakes.</li>
+    <li>Special gift packages or commemorative items.</li>
+    <li>Priority RSVP confirmation.</li>
+    <li>Special food & drink upgrades: dessert tables, specialty cakes, mocktails, cocktails, or themed food stations.</li>
+  </ul>
+
+  <h3>Important Notes:</h3>
+  <ul>
+    <li>Guests are kindly requested to observe proper decorum throughout the event.</li>
+    <li>Any damages to property, equipment, or materials belonging to the venue or hosts caused during the event will incur additional charges, which will be the responsibility of the reserving party.</li>
+    <li>Gifts are optional but appreciated.</li>
+  </ul>
+
+  <h3>RSVP</h3>
+  <p>Spaces are limited. Kindly confirm your attendance by [RSVP Date].</p>
+  <p>Contact: [Name] | [Phone / Email]</p>
+
+  <div class="rsvp-section">
+    <a href="#" id="rsvp-btn">Confirm Attendance</a>
+
+    <div id="rsvp-modal" class="rsvp-modal">
+      <div class="rsvp-modal-content">
+        <span class="close">&times;</span>
+        <h2>RSVP for This Party</h2>
+        <form id="rsvp-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="guests" placeholder="Number of Guests" required>
+          <textarea name="message" placeholder="Any message or special requests"></textarea>
+          <div class="rsvp-buttons">
+            <button type="submit">Submit RSVP</button>
+            <a href="index.html" id="back-menu">Back to Menu</a>
+          </div>
+        </form>
+        <p id="rsvp-success" style="display:none; color: green; font-weight:bold; margin-top:15px;">
+          Thank you! Your RSVP has been received.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
